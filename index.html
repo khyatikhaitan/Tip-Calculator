@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <title></title>
+</head>
+
+<body>
+  <form class="tip-calc">
+    <h1>TIP CALCULATOR</h1>
+    <div class="card-body">
+      <!-- end of  card title -->
+      <div class="feedback text-center alert  text-capitalize p-1">
+      </div>
+    <label for="bill-val" class="form-label">Please mention the Bill Amount</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1">₹</span>
+      <input type="number" class="form-control" id="bill-amount" aria-label="Username" aria-describedby="basic-addon1" step=".01">
+    </div>
+    <label for="bill-val" class="form-label">How many people sharing the bill?</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+        </svg><i class="bi bi-person-fill"></i></span>
+      <input type="text" class="form-control" id="people" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <label for="bill-val" class="form-label">Please rate the service.</label>
+    <div class="input-group mb-3">
+      <select class="form-select" id="service-val" aria-label="Default select example">
+        <option selected>Choose...</option>
+        <option value="1">Great-20%</option>
+        <option value="2">Good-10%</option>
+        <option value="3">bad-2%</option>
+      </select>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-primary" type="button" onclick="calculateTip()">Calculate</button>
+    </div>
+  </form>
+  <div class="loader text-center">
+       <img src="img/loading bars.gif" alt="loading bars">
+      </div>
+      <!-- results -->
+      <div class="results text-center my-3">
+       <h3 class="text-capitalize">tip amount<span> ₹ </span><span id="tip-amount"></span></h3>
+       <h3 class="text-capitalize">total amount<span> ₹ </span><span id="total-amount"></span></h3>
+       <h3 class="text-capitalize">each person owes<span> ₹ </span><span id="person-amount"></span></h3>
+      </div>
+
+  <script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>
